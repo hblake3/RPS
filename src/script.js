@@ -96,8 +96,8 @@ function runGame(choice){
 function printOutcome(result){
     const messages = {
         'tie': "It was a tie.",
-        'win': "You are winner, ha ha ha.",
-        'lose': "You are one pathetic loser!"
+        'win': "You won!",
+        'lose': "You lost!"
     }
     gameText_el.innerHTML = messages[result];
     updateGameUI();

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="container">
+
+        <h2>Rock. Paper. Scissors.</h2>
+        
+        <div class="stats-container">
+            <div class="stat-item">
+                <span class="stat-label">Wins:</span>
+                <span class="stat-value" id="winsText">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Lives:</span>
+                <span class="stat-value" id="livesText">0</span>
+            </div>
+        </div>
+
+        <h4>PLR <i class="fa-solid fa-pen-to-square" onclick="editName()"></i> </h4>
+        <span id = "gameButtons">
+            <button class="rps-button" id="rockBtn" value="rock" onclick="runGame(this)">🪨</button>
+            <button class="rps-button" id="paperBtn" value="paper" onclick="runGame(this)">📃</button>
+            <button class="rps-button" id="scissorsBtn" value="scissors" onclick="runGame(this)">✂️</button>
+        </span>
+        <hr>VS<hr>
+        <span id = "gameButtons-PC">
+            <button class="rps-button-inactive" id="rockBtn-PC">🪨</button>
+            <button class="rps-button-inactive" id="paperBtn-PC">📃</button>
+            <button class="rps-button-inactive" id="scissorsBtn-PC">✂️</button>
+        </span>
+        <h4>Computer</h4>
+
+        <h3 id="compChoiceText">Waiting to play...</h3>
+        <p id="gameText"></p>
+    </div> 
+
+
+    <script src="src/script.js"></script>
+</body>
+</html>

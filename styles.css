@@ -1,20 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
 
 body {
-    font-family: 'Orbitron', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-#container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 2rem;
-    gap: 2rem;
-    text-align: center;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .stats-container {
@@ -23,6 +10,7 @@ body {
     justify-content: center;
     gap: 3rem;
     margin: 1rem 0;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .stat-item {
@@ -46,6 +34,18 @@ body {
     color: #4c77af;
 }
 
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem;
+    gap: 2rem;
+    text-align: center;
+}
+
 .rps-button {
     padding: 20px;
     margin: 8px;
@@ -55,6 +55,18 @@ body {
     transition: all 0.3s ease;
     background: white;
     border: 2px solid #ddd;
+}
+
+.rps-button-inactive {
+    padding: 20px;
+    margin: 8px;
+    font-size: 32px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: rgb(241, 240, 240);
+    border: 2px solid #ddd;
+    cursor: default;
 }
 
 .rps-button:hover {
@@ -70,7 +82,32 @@ body {
     box-shadow: 0 0 20px #af4c51;
     transform: scale(1.1);
 }
+  
+/* Game options styling */
+#container > div {
+    display: flex;
+    gap: 3rem;
+    margin: 2rem 0;
+}
 
+/* Results section */
+hr {
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ddd;
+}
+
+h2{
+    font-size: 32px;
+    margin: 0px;
+}
+
+h4{
+    font-size: 24px;
+    margin: 0px;
+}
+
+/* Overlay background */
 .overlay {
     position: fixed;
     top: 0;
@@ -92,6 +129,7 @@ body {
     visibility: visible;
 }
 
+/* Popup container */
 .popup {
     background: white;
     padding: 2rem;
@@ -102,12 +140,14 @@ body {
     width: 400px;
     transform: scale(0.7);
     transition: transform 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .overlay.show .popup {
     transform: scale(1);
 }
 
+/* Popup content */
 .popup-title {
     font-size: 32px;
     margin: 0 0 1rem 0;
@@ -119,6 +159,7 @@ body {
     margin-bottom: 1.5rem;
 }
 
+/* Restart button */
 .restart-button {
     padding: 12px 24px;
     font-size: 18px;
@@ -137,23 +178,16 @@ body {
     transform: scale(1.05);
 }
 
-hr {
-    width: 80%;
-    max-width: 400px;
-    border: 1px solid #ddd;
-}
 
-h2 {
-    font-size: 32px;
-    margin: 0;
-}
-
-h4 {
-    font-size: 24px;
-    margin: 0;
-}
-
+/* Responsive adjustments */
 @media (max-width: 480px) {
+    #container > div {
+        gap: 1.5rem;
+    }
+    
+    #container > div > span {
+        font-size: 2rem;
+    }
     .stats-container {
         gap: 1.5rem;
     }
@@ -166,7 +200,6 @@ h4 {
     .stat-value {
         font-size: 1rem;
     }
-    
     .popup {
         padding: 1.5rem;
     }
